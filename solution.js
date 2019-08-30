@@ -90,8 +90,8 @@ function checkRows(board) {
 } 
 
 
-function checkColumns(board) {
-    let columns = [];                               // columns is essentially the same as board, but rotated
+function checkColumns(board) {                      // columns are stored as "rows" to be checked via checkRows()
+    let columns = [];                               
     
     for (i1 = 0; i1 < board.length; i1++) {         // create array of columns
         let row = board[i1];
@@ -114,7 +114,7 @@ function checkColumns(board) {
 } 
 
 
-function checkBoxes(board) {
+function checkBoxes(board) {                            // boxes are stored as "rows" to be checked via checkRows()
     let boxes = [];
     
     for (i1 = 0; i1 < board.length; i1++) {
